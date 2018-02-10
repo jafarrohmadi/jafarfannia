@@ -29,8 +29,7 @@ Author URI: http://webthemez.com/
 <link rel="stylesheet" href="css/styles.css" />
 <link href="font/css/font-awesome.min.css" rel="stylesheet">
 
-<audio preload="" loop="" controls="" autoplay="yes" style="display:none">
-<source type="audio/mpeg" src=" http://pink-theme.akanikah.com//lagu.mp3 "></source>
+<audio src="http://pink-theme.akanikah.com//lagu.mp3" controls="none" id="myaudio" autoplay="yes" style="display:none" >
 </audio>
 </head>
 
@@ -107,5 +106,30 @@ Author URI: http://webthemez.com/
 <script src="contact/contact_me.js"></script>
 <script src="js/custom.js" type="text/javascript"></script> 
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript">
+
+var maudio = document.getElementById('myaudio');
+
+var soundSprite = [
+  {start: 0, end: 3000},
+  {start: 3500, end: 6789}
+];
+
+element.addEventListener('touchstart', function(ev) {
+  maudio.play();
+  playSoundFile(0);
+})
+
+function playSoundFile(idx) {
+  maudio.currentPosition = soundSprite[idx].start;
+  var x = setInterval(function() {
+    if(maudio.currentPosition >= soundSprite[idx].end) {
+      maudio.pause(); // There is no stop() in HTML5
+      clearInterval(x);
+    }
+  }, 50);
+}
+
+</script>
 </body>
 </html>

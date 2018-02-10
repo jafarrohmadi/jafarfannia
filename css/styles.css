@@ -488,8 +488,7 @@ h2, .h2 {
 /*home*/
 
 #home .heading h2 {
-	color: #ffffff;
-	font-size: 60px !important;
+	color: #6ea0cc; font-size: 60px !important;
 	font-weight: normal !important;
 	text-transform: capitalize;
 	margin-top: 50px;

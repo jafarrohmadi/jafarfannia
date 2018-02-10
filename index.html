@@ -33,6 +33,9 @@ Author URI: http://webthemez.com/
 
 <body> 
 <!--/.header-->
+<audio id="audio1" controls="controls" loop="loop" autoplay="autoplay" style="display:none;">
+   <source src="http://pink-theme.akanikah.com//lagu.mp3" type="audio/mpeg" />
+</audio>
 <div id="#top"></div>
 <section id="home">
   <div class="banner-container">
@@ -106,28 +109,28 @@ Author URI: http://webthemez.com/
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript">
 
-(function() {
+var maudio = document.getElementById('myaudio');
 
-    var currentSound;
-    // I have a div called "page"
-    var soundcv = document.body;
+var soundSprite = [
+  {start: 0, end: 3000},
+  {start: 3500, end: 6789}
+];
 
-    // This only works for one sound for simplicity's sake
-    function playSound(sound){
+element.addEventListener('touchstart', function(ev) {
+  maudio.play();
+  playSoundFile(0);
+})
 
-        if (currentSound == null){
-            var audio = document.createElement('audio');
-            audio.src = sound;
-            soundcv.appendChild(audio);
-            currentSound = audio;
-        }
-
-        currentSound.play();
+function playSoundFile(idx) {
+  maudio.currentPosition = soundSprite[idx].start;
+  var x = setInterval(function() {
+    if(maudio.currentPosition >= soundSprite[idx].end) {
+      maudio.pause(); // There is no stop() in HTML5
+      clearInterval(x);
     }
+  }, 50);
+}
 
-    // This isn't a real audio file URL - replace it with one of your own
-    playSound('http://pink-theme.akanikah.com//lagu.mp3');
-})();
 </script>
 </body>
 </html>

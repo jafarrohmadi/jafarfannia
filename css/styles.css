@@ -10,6 +10,12 @@ Author URI: http://webthemez.com/
 	font-family: 'Open Sans', sans-serif;
 }
 
+.maps{
+	width: auto;
+    height: 200px;
+    background: #efefd9;
+
+}
 
 body {
 	font-family: 'Open Sans', Arial, sans-serif;

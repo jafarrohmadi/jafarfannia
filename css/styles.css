@@ -9,6 +9,20 @@ Author URI: http://webthemez.com/
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.autoasd{
+	background: #fff;
+    opacity: 0.8;
+    margin-right: 95px;
+    margin-left: 95px;
+
+}
+.autoasd2{
+	background: #fff;
+    opacity: 0.8;
+    margin-right: 165px;
+    margin-left: 165px;
+}        
 body {
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
@@ -354,11 +368,11 @@ h2, .h2 {
 	height: 100px;
 	text-shadow: none;
 	vertical-align: middle;
-	color: #F44336;
+	color: #fff;
 	margin: 10px 4px;
 	height: auto;
-	/* padding-bottom: 8px; */
-	/* background: rgba(233, 30, 99, 0.31); */
+	 padding-bottom: 8px; 
+	 background: rgba(233, 30, 99, 0.31); 
 	width: 112px;
 	border: 1px dashed rgba(255, 255, 255, 0.46);
 }
@@ -500,7 +514,7 @@ opacity: .6;
 /*home*/
 
 #home .heading h2 {
-	color: #6ea0cc; font-size: 60px !important;
+	color: #ff9797; font-size: 60px !important;
 	font-weight: normal !important;
 	text-transform: capitalize;
 	margin-top: 50px;
@@ -509,7 +523,7 @@ opacity: .6;
 	font-weight: 700 !important;
 }
 #home .heading h3 {
-	color: #ffffff;
+	color: #ff9797;
 	font-size: 28px !important;
 	font-weight: 700 !important;
 	text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.33);
@@ -1085,6 +1099,15 @@ footer {
 
 
 @media (max-width: 768px) {
+.autoasd{
+	
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.autoasd2{
+    margin-right: 30px;
+    margin-left: 30px;
+}  
 @media(min-height:  510px ){
 	.banner-container {
 		min-height: 755px;
@@ -1095,6 +1118,7 @@ footer {
 	.banner-container {
 		min-height: 0px;
 	}   
+
 }
 
 .banner-container {
